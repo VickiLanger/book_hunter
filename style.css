@@ -8,4 +8,9 @@ div {
     width: 40%;
     margin: 20px;
     border: 4px double #034;
+    border-radius: 10px;
+}
+
+button {
+    margin: 20px;
 }
