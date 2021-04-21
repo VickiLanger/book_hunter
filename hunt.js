@@ -17,14 +17,13 @@ function get_prompts() {
 function fill_prompts() {
     get_prompts();
 
-    var length = prompts.length //get length of array for later random num
-
     // show item in <li> tag
     hunt_prompts = document.querySelectorAll(".hunt-prompt") // get all elements
     hunt_prompts.forEach(element => {
-        var rand = Math.round(Math.random() * length)  // gets rand num w/ decimal, then rounds to get rid of the decimal
-        element.innerHTML = prompts[rand]; // changes the given el to whatever is after the =
-        //TODO:make sure not to use a prompt more than once in the list of 10
+        var length = prompts.length //get length of array for random index
+        var rand = Math.round(Math.random() * length)  // get rand num w/ decimal, then rounds to get rid of the decimal
+        element.innerHTML = prompts[rand]; // change el to random index in array
+        prompts.splice(rand); //remove index after use //TODO:make sure not to use a prompt more than once in the list of 10
         //element.style.background = "orange"; // just for testing
         console.log("<li> updated") // just for testing
     });
@@ -35,3 +34,4 @@ function read_next() {
     get_prompts();
     pass
 }
+
