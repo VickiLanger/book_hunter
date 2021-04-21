@@ -7,8 +7,8 @@ function get_prompts() {
         })
         .then(function (data) {
             console.log(data);
-            data.split('\n')// split into strings by line
-            prompts.append(data);  // populate array with lines from txt file
+            lines = data.split('\n')// split into strings by line
+            prompts.append(lines);  // populate array with lines from txt file
         })
 }
 
