@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Book Hunter</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <h1>Bookshelf Hunter</h1>
+    <div>
+        <button onclick="get_prompts();">Generate List of 10</button>
+        <ol>
+            <li class="hunt-prompt">first</li>
+            <li class="hunt-prompt">second</li>
+            <li class="hunt-prompt">third</li>
+            <li class="hunt-prompt">fourth</li>
+            <li class="hunt-prompt">fifth</li>
+            <li class="hunt-prompt">sixth</li>
+            <li class="hunt-prompt">seventh</li>
+            <li class="hunt-prompt">eigth</li>
+            <li class="hunt-prompt">ninth</li>
+            <li class="hunt-prompt">tenth</li>
+        </ol>
+    </div>
+    <div>
+        <button onclick="#">What Should I Read Next?</button>
+        <p class="read-prompt">{type of book to read next}</p>
+    </div>
+
+</body>
+<script>
+    // make list from txt file
+    var prompts = ["cat", "dog", "mouse", "fish", "rat", "snail", "lizard"]
+    // populate prompts with lines from txt file
+    fetch('prompts.txt')
+        .then(response => response.text())
+        .then(data => {
+            prompts.append();
+            console.log(prompts);
+            console.log(data);
+        });
+
+
+    var length = prompts.length //get length of array for later random num
+
+    // show item in <li> tag
+    hunt_prompts = document.querySelectorAll(".hunt-prompt") // get all elements
+    hunt_prompts.forEach(element => {
+        var rand = Math.round(Math.random() * length)  // gets rand num w/ decimal, then rounds to get rid of the decimal
+        element.innerHTML = prompts[rand]; // changes the given el to whatever is after the =
+        //element.style.background = "orange"; // just for testing
+        console.log("<li> updated") // just for testing
+    });
+
+</script>
+
+</html>
