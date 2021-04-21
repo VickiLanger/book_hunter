@@ -24,7 +24,7 @@ function fill_prompts() {
     hunt_prompts.forEach(element => {
         var rand = Math.round(Math.random() * length)  // gets rand num w/ decimal, then rounds to get rid of the decimal
         element.innerHTML = prompts[rand]; // changes the given el to whatever is after the =
-        //TODO:make sure not to use a prompt again in the list of 10
+        //TODO:make sure not to use a prompt more than once in the list of 10
         //element.style.background = "orange"; // just for testing
         console.log("<li> updated") // just for testing
     });
