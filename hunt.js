@@ -9,6 +9,7 @@ function get_prompts() {
             console.log(data);
             lines = data.split('\n')// split into strings by line
             prompts.push(lines);  // populate array with lines from txt file
+            console.log(prompts);
         })
 }
 
