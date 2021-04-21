@@ -6,10 +6,10 @@ function get_prompts() {
             return response.text();  // returns a string of all the text in the response
         })
         .then(function (data) {
-            console.log(data);
+            console.log(data);  //for testing
             lines = data.split('\n')// split into strings by line
             prompts.push(lines);  // populate array with lines from txt file
-            console.log(prompts);
+            console.log(prompts);  //for testing
         })
 }
 
@@ -23,7 +23,7 @@ function fill_prompts() {
     hunt_prompts = document.querySelectorAll(".hunt-prompt") // get all elements
     hunt_prompts.forEach(element => {
         var rand = Math.round(Math.random() * length)  // gets rand num w/ decimal, then rounds to get rid of the decimal
-        element.innerHTML = prompts[rand]; // changes the given el to whatever is after the =
+        hunt_prompts.innerHTML = prompts[rand]; // changes the given el to whatever is after the =
         //TODO:make sure not to use a prompt more than once in the list of 10
         //element.style.background = "orange"; // just for testing
         console.log("<li> updated") // just for testing
