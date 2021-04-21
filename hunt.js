@@ -1,34 +1,20 @@
-function get_prompts(list) {
+function get_prompts() {
+    var prompts = []  // start with empty list
+
+    fetch('prompts.txt')  //grab the file
+        .then(function (response) {
+            return response.text();  // returns a string of all the text in the response
+        })
+        .then(function (data) {
+            console.log(data);
+            data.split('\n')// split into strings by line
+            prompts.append(data);  // populate array with lines from txt file
+        })
+}
 
 
-
-    // make list from txt file
-    var prompts = ["book with a disabled main character",
-        "A how-to book",
-        "A book with a number in the title",
-        "A book that has been translated from another language",
-        "A book with a title that is only one word",
-        "A book that made you mad",
-        "A book released last year",
-        "a book set in a continent other than where you live",
-        "religious or spiritual text (eg, Torah, Qur'an, Sutra, Vedas, etc)",
-        "A book that made you laugh",
-        "book that talks about major systemic issues (eg classism, racism, ableism, xenophobia etc)",
-        "A book with sprayed edges (colored)",
-        "book with a character who deals with chronic illness or diease",
-        "A book you would rate 6 out of 5 stars",
-        "a book with a LGBTQIA+ main character where the story isn't about their queerness",
-    ]
-    // populate prompts with lines from txt file
-
-    //fetch('prompts.txt')
-    //    .then(response => response.text())
-    //    .then(data => {
-    //        prompts.append();
-    //        console.log(prompts);
-    //        console.log(data);
-    //    });
-
+function fill_prompts() {
+    get_prompts();
 
     var length = prompts.length //get length of array for later random num
 
@@ -42,4 +28,9 @@ function get_prompts(list) {
         console.log("<li> updated") // just for testing
     });
 
+}
+
+function read_next() {
+    get_prompts();
+    pass
 }
