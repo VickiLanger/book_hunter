@@ -10,6 +10,7 @@ h1,h3{
 
 p, li{
     font-family: 'Nunito', sans-serif;
+    line-height: 150%;
     color: #333;
 }
 
@@ -27,6 +28,7 @@ button {
     height: auto;
     font-size: 20px;
     border-radius: 10px;
+    padding: 10px;
 }
 
 footer {
