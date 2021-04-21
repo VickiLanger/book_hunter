@@ -1,6 +1,6 @@
-function get_prompts() {
-    var prompts = []  // start with empty list
+var prompts = []  // start with empty list
 
+function get_prompts() {
     fetch('prompts.txt')  //grab the file
         .then(function (response) {
             return response.text();  // returns a string of all the text in the response
