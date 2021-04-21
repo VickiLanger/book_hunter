@@ -6,8 +6,8 @@ book with an asexual main character
 book written by a transgender author
 book written by a disabled author
 A book that has been translated from another language
-A book you would rate 5/5 stars
-A book you would rate 0/5 stars
+A book you would rate 6 out of 5 stars
+A book you would rate 0 out of 5 stars
 A book with your favorite trope
 a book that has been read for a book club event
 A book released this year
@@ -30,7 +30,10 @@ A memoir
 A non-fiction book by an author who normally writes fiction
 A fiction book by an author who normally writes non-fiction
 A book that made you laugh
+A book that made you cry
+A book that made you mad
 A how-to book
+A book with sprayed edges (colored)
 religious or spiritual text (eg, Torah, Qur'an, Sutra, Vedas, etc)
 A parenting book
 The fifth (5th) book in a series
