@@ -3,6 +3,16 @@ body {
     text-align:center;
 }
 
+h1,h3{
+    font-family: 'Comfortaa', cursive;
+    color: #034;
+}
+
+p{
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+}
+
 div {
     display: inline-block;
     width: 40%;
@@ -12,5 +22,9 @@ div {
 }
 
 button {
-    margin: 20px;
+    font-family: 'Pompiere', cursive;
+    margin: 10px;
+    height: auto;
+    font-size: 20px;
+    border-radius: 10px;
 }
