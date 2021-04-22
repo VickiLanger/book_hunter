@@ -17,18 +17,16 @@ function get_prompts() {
 function fill_prompts() {
     get_prompts();
 
-    var length = prompts.length // get current length of array
-
     // show item in <li> tag
     hunt_prompts = document.querySelectorAll(".hunt-prompt") // get all elements
-    for (prompt in hunt_prompts) {
-
+    hunt_prompts.forEach(element => {
+        var length = prompts.length //get current length of array
         var rand = Math.round(Math.random() * length)  // get rand num w/ decimal, then rounds to get rid of the decimal
-        hunt_prompts.innerHTML = prompts[rand]; // change el to random index in array
+        element.innerHTML = prompts[rand]; // change el to random index in array
         //prompts.splice(rand); //remove index after use //TODO:make sure not to use a prompt more than once in the list of 10
         //element.style.background = "orange"; // just for testing
         console.log("<li> updated") // just for testing
-    };
+    });
 
 }
 
