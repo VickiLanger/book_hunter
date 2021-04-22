@@ -13,7 +13,7 @@ function get_prompts() {
         })
 }
 
-
+//TODO: make the prompts fill with 8 from prompts.txt, 1 from genres.txt, 1 from tropes.txt
 function fill_prompts() {
     get_prompts();
 
