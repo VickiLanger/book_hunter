@@ -6,8 +6,9 @@ function get_prompts() {
             return response.text();  // returns a string of all the text in the response
         })
         .then(function (data) {
-            console.log(data);  //for testing
+            console.log("data " + data);  //for testing
             lines = data.split('\n')// split into strings by line
+            console.log("lines " + lines);  //for testing
             for (line in lines) {
                 prompts.push(line);  // populate array with individual lines from txt file
                 console.log("line added to array, hopefully")
