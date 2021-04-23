@@ -6,14 +6,10 @@ function get_prompts() {
             return response.text();  // returns a string of all the text in the response
         })
         .then(function (data) {
-            console.log("data " + data);  //for testing
             lines = data.split('\n')// split into strings by line
-            console.log("lines " + lines);  //for testing
             for (line of lines) {
                 prompts.push(line);  // populate array with individual lines from txt file
-                console.log("line added to array, hopefully")
             }
-            console.log(prompts);  //for testing
         })
 }
 
@@ -29,7 +25,6 @@ function fill_prompts() {
         console.log(rand); // just for testing
         element.innerHTML = prompts[rand]; // change el to random index in array
         //prompts.splice(rand); //remove index after use //TODO:make sure not to use a prompt more than once in the list of 10
-        //element.style.background = "orange"; // just for testing
         console.log("<li> updated") // just for testing
     });
 
