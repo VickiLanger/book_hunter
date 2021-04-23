@@ -36,3 +36,16 @@ footer {
     bottom: 0px;
     text-align:center;
 }
+
+ul.no_bullet {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    li.book {
+    background: url('books.png') no-repeat left top;
+    height: 54px;
+    padding-left: 44px;
+    padding-top: 3px;
+    }
