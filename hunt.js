@@ -23,8 +23,9 @@ function fill_prompts() {
         var length = prompts.length //get current length of array
         var rand = Math.round(Math.random() * length)  // get rand num w/ decimal, then rounds to get rid of the decimal
         console.log(rand); // just for testing
-        element.innerHTML = prompts[rand]; // change el to random index in array
-        removed = prompts.splice(rand); //remove index after use //TODO:make sure not to use a prompt more than once in the list of 10
+        random_prompt = prompts[rand];  // choose random prompt
+        element.innerHTML = random_prompt; // change el to random index in array
+        removed = prompts.splice(rand, 1); //remove index after use //TODO:make sure not to use a prompt more than once in the list of 10
         console.log(removed) // just for testing
     });
 
